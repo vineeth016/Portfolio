@@ -1,206 +1,200 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="theme-color" content="#070a12"/>
-<title>Golla Vineeth - Software Engineer</title>
-<meta name="description" content="Software Engineer building scalable backend systems, distributed platforms, and Generative AI/RAG applications with Java, Spring Boot, Kafka, AWS, React, and TypeScript."/>
-<meta property="og:title" content="Golla Vineeth - Software Engineer"/>
-<meta property="og:description" content="Backend systems. Distributed platforms. Generative AI/RAG."/>
-<meta property="og:type" content="website"/>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#03141d" />
+<title>Vineeth Golla — Software Engineer</title>
+<meta name="description" content="Vineeth Golla — Software Engineer building backend systems, distributed services, search platforms, and reliable cloud infrastructure." />
+<meta property="og:title" content="Vineeth Golla — Software Engineer" />
+<meta property="og:description" content="Backend systems, distributed services, search, streaming, and cloud engineering." />
+<meta property="og:type" content="website" />
 <style>
 :root{
- --bg:#070a12;--bg2:#0b1020;--card:rgba(14,19,32,.78);--card2:rgba(19,26,43,.72);
- --text:#f8fafc;--muted:#9aa6b7;--faint:#667085;--line:rgba(255,255,255,.09);
- --violet:#8b5cf6;--cyan:#22d3ee;--blue:#60a5fa;--green:#4ade80;--pink:#f472b6;--gold:#fbbf24;
- --max:1180px;--r:24px;--shadow:0 30px 100px rgba(0,0,0,.38);
-}
-html[data-theme="light"]{
- --bg:#f7f8fb;--bg2:#fff;--card:rgba(255,255,255,.88);--card2:#f4f6fb;
- --text:#101828;--muted:#475467;--faint:#667085;--line:rgba(16,24,40,.1);
- --shadow:0 30px 90px rgba(15,23,42,.12);
+  --ink:#eaf8ff; --muted:#9bc0ce; --faint:#5d8797; --line:rgba(181,230,247,.14);
+  --glass:rgba(4,27,39,.58); --glass2:rgba(7,39,54,.72); --deep:#021018; --deep2:#031923;
+  --aqua:#64e8dc; --cyan:#67d8ff; --foam:#dffcff; --sand:#ffd9a0; --green:#88e8a6;
+  --max:1160px; --radius:24px; --shadow:0 28px 80px rgba(0,0,0,.32);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;background:var(--bg)}
-body{margin:0;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:
-radial-gradient(900px 500px at 86% -10%,rgba(139,92,246,.15),transparent 62%),
-radial-gradient(700px 500px at -8% 36%,rgba(34,211,238,.11),transparent 58%),
-linear-gradient(180deg,var(--bg),var(--bg2) 48%,var(--bg));
-line-height:1.55;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background-image:
-linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),
-linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:64px 64px;
-mask-image:linear-gradient(to bottom,black,transparent 80%)}
-a{text-decoration:none;color:inherit}
-button{font:inherit}
-.wrap{width:min(calc(100% - 38px),var(--max));margin:auto}
-.top{position:sticky;top:16px;z-index:50;padding-top:16px}
-.navbar{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 10px 0 16px;
-border:1px solid var(--line);border-radius:18px;background:color-mix(in srgb,var(--bg) 72%,transparent);
-backdrop-filter:blur(8px) saturate(125%);box-shadow:0 14px 40px rgba(0,0,0,.08)}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em}
-.mark{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;font-size:12px;font-weight:800;
-border:1px solid rgba(255,255,255,.16);background:linear-gradient(145deg,rgba(139,92,246,.35),rgba(34,211,238,.16))}
-.navlinks{display:flex;gap:5px}.navlinks a,.ghost{padding:9px 11px;border-radius:10px;color:var(--muted);font-size:13px;transition:.2s}
-.navlinks a:hover,.ghost:hover{color:var(--text);background:var(--card2)}
-.navright{display:flex;gap:8px;align-items:center}.ghost{border:1px solid var(--line);background:var(--card);cursor:pointer}
-.primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 17px;border-radius:12px;
-background:linear-gradient(135deg,var(--violet),#6d5dfc 55%,var(--cyan));color:white;font-weight:750;font-size:13px;
-box-shadow:0 14px 35px rgba(139,92,246,.23);transition:.2s}.primary:hover{transform:translateY(-2px);box-shadow:0 18px 45px rgba(139,92,246,.32)}
-.hero{min-height:780px;display:grid;grid-template-columns:1.02fr .98fr;gap:72px;align-items:center;padding:72px 0 50px}
-.kicker{display:inline-flex;align-items:center;gap:9px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;
-background:var(--card);color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(74,222,128,.12)}
-h1,h2,h3,p{margin-top:0} h1{font-size:clamp(58px,7.3vw,100px);line-height:.92;letter-spacing:-.07em;margin:24px 0 24px}
-.grad{background:linear-gradient(110deg,#fff 0%,#c4b5fd 38%,#67e8f9 76%,#fff 100%);background-size:180% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s linear infinite}
-html[data-theme="light"] .grad{background:linear-gradient(110deg,#111827,#6d28d9,#0891b2,#111827);-webkit-background-clip:text;color:transparent}
-@keyframes shine{to{background-position:180% center}}
-.lede{font-size:clamp(18px,1.9vw,22px);color:var(--muted);max-width:760px}.lede strong{color:var(--text)}
-.cta{display:flex;gap:11px;flex-wrap:wrap;margin-top:29px}.subcta{display:inline-flex;align-items:center;gap:8px;padding:0 16px;min-height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);font-size:13px;font-weight:700;color:var(--text);transition:.2s}.subcta:hover{transform:translateY(-2px);border-color:rgba(139,92,246,.35)}
-.quicklinks{display:flex;gap:18px;flex-wrap:wrap;margin-top:25px;color:var(--muted);font-size:13px}.quicklinks a:hover{color:var(--text)}
-.hero-visual{position:relative;min-height:560px;display:grid;place-items:center}
-.ring{position:absolute;border-radius:50%;border:1px dashed rgba(139,92,246,.18);animation:spin 24s linear infinite}
-.r1{width:520px;height:520px}.r2{width:380px;height:380px;border-color:rgba(34,211,238,.18);animation-duration:16s;animation-direction:reverse}.r3{width:270px;height:270px;border-color:rgba(251,191,36,.16);animation-duration:13s}
-@keyframes spin{to{transform:rotate(360deg)}}
-.float-chip{position:absolute;padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(11,16,32,.96);font-size:11px;font-weight:750;box-shadow:0 10px 28px rgba(0,0,0,.18)}
-html[data-theme="light"] .float-chip{background:#ffffff}
-.f1{top:6%;left:33%}.f2{top:24%;right:2%}.f3{bottom:27%;right:0}.f4{bottom:10%;left:35%}.f5{left:0;top:31%}.f6{left:8%;bottom:27%}
-.star-lane{position:relative;width:min(560px,96%);aspect-ratio:1.06/1;border-radius:34px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,rgba(8,12,22,.99),rgba(8,13,24,.98) 48%,rgba(10,16,28,.99));box-shadow:var(--shadow)}
-html[data-theme="light"] .star-lane{background:linear-gradient(180deg,#ffffff,#f7f9fc 58%,#eef3fb)}
-.star-lane:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 12%,rgba(139,92,246,.18),transparent 28%),radial-gradient(circle at 18% 80%,rgba(34,211,238,.10),transparent 24%)}
-.sky-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.72),transparent 92%)}
-.starfield{position:absolute;inset:0;overflow:hidden}.star{position:absolute;width:2px;height:2px;border-radius:50%;background:rgba(255,255,255,.92);box-shadow:0 0 8px rgba(255,255,255,.55);animation:twinkle linear infinite}.star.big{width:3px;height:3px;background:#dbeafe;box-shadow:0 0 12px rgba(96,165,250,.7)}
-@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.28)}}
-.trail{position:absolute;height:2px;border-radius:999px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.95),rgba(34,211,238,.2));box-shadow:0 0 18px rgba(255,255,255,.18);transform:rotate(-18deg)}
-.t1{width:180px;top:18%;left:-28%;animation:shoot1 6.5s linear infinite}.t2{width:130px;top:32%;left:-24%;animation:shoot2 7.2s linear infinite 1.2s}.t3{width:160px;top:56%;left:-30%;animation:shoot3 8.1s linear infinite 2.4s}.t4{width:110px;top:72%;left:-20%;animation:shoot4 6.8s linear infinite 3.2s}
-@keyframes shoot1{0%{transform:translate(0,0) rotate(-18deg);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate(620px,160px) rotate(-18deg);opacity:0}}
-@keyframes shoot2{0%{transform:translate(0,0) rotate(-18deg);opacity:0}12%{opacity:1}68%{opacity:1}100%{transform:translate(600px,170px) rotate(-18deg);opacity:0}}
-@keyframes shoot3{0%{transform:translate(0,0) rotate(-18deg);opacity:0}14%{opacity:1}72%{opacity:1}100%{transform:translate(640px,190px) rotate(-18deg);opacity:0}}
-@keyframes shoot4{0%{transform:translate(0,0) rotate(-18deg);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate(580px,150px) rotate(-18deg);opacity:0}}
-.halo{position:absolute;border-radius:50%;filter:blur(40px);opacity:.22}.h1{width:170px;height:170px;right:10%;top:8%;background:rgba(139,92,246,.65)}.h2{width:140px;height:140px;left:8%;bottom:20%;background:rgba(34,211,238,.42)}
-.focus-panel{position:absolute;left:24px;right:24px;bottom:24px;padding:22px;border-radius:22px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(9,14,24,.82),rgba(12,18,29,.92));backdrop-filter:blur(6px)}
-html[data-theme="light"] .focus-panel{background:linear-gradient(180deg,rgba(255,255,255,.93),rgba(248,250,252,.98))}
-.focus-panel small{display:block;color:var(--cyan);font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:800;margin-bottom:10px}.focus-panel h3{font-size:30px;letter-spacing:-.04em;margin:0 0 8px}.focus-panel p{margin:0;color:var(--muted);font-size:14px}.lane-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.lane-tag{padding:7px 9px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-size:11px;font-weight:700;color:var(--muted)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:0 0 55px}.stat{padding:18px;border:1px solid var(--line);border-radius:17px;background:var(--card)}.stat span{display:block;color:var(--faint);font-size:10px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}.stat strong{font-size:19px;letter-spacing:-.03em}
-section{padding:96px 0}.section-head{display:grid;grid-template-columns:1fr .8fr;gap:56px;align-items:end;margin-bottom:42px}.eyebrow{color:var(--cyan);font-size:11px;text-transform:uppercase;letter-spacing:.16em;font-weight:800}h2{font-size:clamp(38px,5vw,64px);line-height:.98;letter-spacing:-.05em;margin:8px 0 0}.section-head p{margin:0;color:var(--muted);max-width:510px;justify-self:end}
-.journey{padding-top:40px}.journey-card{position:relative;padding:34px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(180deg,rgba(13,18,31,.96),rgba(10,14,25,.88));overflow:hidden;box-shadow:var(--shadow)}
-.route-wrap{position:relative;margin-top:28px;padding-top:36px;padding-bottom:24px}.route-line{position:absolute;left:6%;right:6%;top:53px;height:3px;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--green),var(--violet),var(--pink),var(--gold));opacity:.9}
-.route-plane{position:absolute;left:6%;top:30px;font-size:26px;filter:drop-shadow(0 8px 18px rgba(34,211,238,.22));animation:fly 12s linear infinite}
-@keyframes fly{0%{left:6%;transform:translateY(0) rotate(-6deg)}20%{transform:translateY(-8px) rotate(-2deg)}40%{transform:translateY(2px) rotate(0)}60%{transform:translateY(-5px) rotate(3deg)}80%{transform:translateY(1px) rotate(-1deg)}100%{left:91%;transform:translateY(-2px) rotate(7deg)}}
-.stops{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.stop{position:relative;padding-top:34px}.stop:before{content:"";position:absolute;top:46px;left:50%;transform:translateX(-50%);width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--line)}.stop.active:before{border-color:var(--cyan);box-shadow:0 0 0 6px rgba(34,211,238,.1)}.stop h3{font-size:17px;letter-spacing:-.02em;margin-bottom:4px}.stop b{display:block;font-size:11px;color:var(--cyan);text-transform:uppercase;letter-spacing:.12em;margin-bottom:7px}.stop p{margin:0;color:var(--muted);font-size:13px;max-width:190px}
-.travel-modes{margin-top:28px;display:grid;gap:14px}.mode-row{position:relative;padding:18px 18px 18px 86px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.04);overflow:hidden}.mode-icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:28px}.mode-title{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:8px}.mode-track{position:relative;height:12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line);overflow:hidden}.mode-track:before{content:"";position:absolute;left:0;right:0;top:50%;height:2px;transform:translateY(-50%);background:linear-gradient(90deg,rgba(96,165,250,.8),rgba(139,92,246,.8),rgba(34,211,238,.8))}.mover{position:absolute;top:50%;transform:translateY(-50%);font-size:22px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.2))}.train .mover{animation:ride 10s linear infinite}.ship .mover{animation:sail 12s ease-in-out infinite}.mode-copy{margin-top:10px;font-size:13px;color:var(--muted)}@keyframes ride{0%{left:0%}50%{transform:translateY(-50%) translateX(0) scale(1.03)}100%{left:92%}}@keyframes sail{0%{left:0%;transform:translateY(-50%) rotate(-2deg)}25%{transform:translateY(-58%) rotate(2deg)}50%{transform:translateY(-46%) rotate(-1deg)}75%{transform:translateY(-56%) rotate(2deg)}100%{left:92%;transform:translateY(-50%) rotate(-2deg)}}
-.experience{display:grid;gap:16px}.role{position:relative;padding:28px;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,rgba(13,18,31,.96),rgba(10,14,25,.9));overflow:hidden;transition:.25s;isolation:isolate}.role:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--role);opacity:.9}.role:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--role) 36%,var(--line));box-shadow:var(--shadow)}.role-top{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center}.logo{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;font-weight:900;font-size:14px;letter-spacing:-.03em;border:1px solid color-mix(in srgb,var(--role) 30%,var(--line));background:color-mix(in srgb,var(--role) 12%,var(--card))}.role h3{font-size:25px;letter-spacing:-.03em;margin:0}.role-title{color:var(--muted);font-size:13px;margin-top:3px}.when{text-align:right;color:var(--muted);font-size:12px}.when b{display:block;color:var(--text);font-size:13px}.role-copy{color:var(--muted);max-width:930px;margin:22px 0 0;font-size:15px}.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}.chip{padding:7px 10px;border-radius:999px;border:1px solid var(--line);background:var(--card2);font-size:11px;font-weight:700;color:var(--muted)}.metric{display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:10px 12px;border-radius:12px;background:rgba(139,92,246,.09);border:1px solid rgba(139,92,246,.18)}.metric strong{font-size:22px;color:#c4b5fd}.metric span{font-size:12px;color:var(--muted)}
-.workgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.case{position:relative;min-height:320px;border:1px solid var(--line);border-radius:var(--r);padding:24px;background:var(--card);overflow:hidden;transition:.25s}.case:hover{transform:translateY(-4px);border-color:rgba(34,211,238,.27);box-shadow:var(--shadow)}.case .num{color:var(--faint);font:700 11px ui-monospace,monospace}.case h3{font-size:26px;letter-spacing:-.035em;margin:40px 0 8px}.case p{color:var(--muted);font-size:14px;max-width:550px}.flow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:27px}.box{padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--card2);font:700 11px ui-monospace,monospace}.arrow{color:var(--faint)}.case-glow{position:absolute;width:180px;height:180px;border-radius:50%;filter:blur(80px);opacity:.15;right:-50px;bottom:-60px;background:var(--glow)}
-.ai-banner{position:relative;overflow:hidden;padding:38px;border:1px solid rgba(139,92,246,.23);border-radius:30px;background:linear-gradient(125deg,rgba(139,92,246,.16),rgba(34,211,238,.07) 55%,rgba(10,14,25,.7))}html[data-theme="light"] .ai-banner{background:linear-gradient(125deg,#f3e8ff,#ecfeff 55%,#fff)}.ai-banner h2{max-width:850px}.ai-banner p{max-width:760px;color:var(--muted);margin-top:18px}.ai-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}.ai-tags span{padding:9px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);font-size:12px;font-weight:750}
-.stack{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stackcol{border:1px solid var(--line);border-radius:18px;padding:18px;background:var(--card)}.stackcol h3{font-size:14px;margin-bottom:13px}.stackcol p{margin:0;color:var(--muted);font-size:12px;line-height:1.8}
-.contact{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;padding:48px;border:1px solid var(--line);border-radius:30px;background:var(--card);margin-bottom:60px}.contact h2{font-size:clamp(38px,4.5vw,62px);margin-bottom:12px}.contact p{margin:0;color:var(--muted)}.contact-actions{display:flex;gap:10px;flex-wrap:wrap}
-footer{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:24px 0 40px;color:var(--faint);font-size:12px}.reveal{opacity:0;transform:translateY(18px);transition:.65s cubic-bezier(.2,.8,.2,1)}.reveal.on{opacity:1;transform:none}.spotlight{position:fixed;pointer-events:none;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.08),transparent 67%);transform:translate(-50%,-50%);z-index:-1}
-@media(max-width:980px){.navlinks{display:none}.hero{grid-template-columns:1fr;min-height:auto;padding-top:90px}.hero-visual{min-height:500px}.section-head{grid-template-columns:1fr}.section-head p{justify-self:start}.stats{grid-template-columns:repeat(2,1fr)}.workgrid{grid-template-columns:1fr}.stack{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1fr}.role-top{grid-template-columns:auto 1fr}.when{grid-column:1/-1;text-align:left}.stops{grid-template-columns:1fr;gap:16px}.route-line{display:none}.route-plane{display:none}.stop{padding-top:0;padding-left:24px}.stop:before{left:0;top:8px;transform:none}.route-wrap{padding-top:8px}.mode-row{padding-left:70px}}
-@media(max-width:560px){.wrap{width:min(calc(100% - 24px),var(--max))}.navbar{height:58px}.navright .primary{display:none}.hero{padding-top:66px;gap:24px}h1{font-size:54px}.hero-visual{min-height:420px}.star-lane{border-radius:26px}.focus-panel{left:16px;right:16px;bottom:16px;padding:18px}.focus-panel h3{font-size:24px}.stats{grid-template-columns:1fr 1fr}.role{padding:20px}.workgrid{grid-template-columns:1fr}.stack{grid-template-columns:1fr}.contact{padding:28px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+html{scroll-behavior:smooth;background:var(--deep)}
+body{margin:0;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:
+  radial-gradient(900px 560px at 80% -5%,rgba(62,202,216,.14),transparent 65%),
+  radial-gradient(700px 500px at 10% 25%,rgba(27,125,164,.13),transparent 65%),
+  linear-gradient(180deg,#062a37 0%,#041f2a 28%,#031923 58%,#020d14 100%);
+  line-height:1.55;overflow-x:hidden}
+a{color:inherit;text-decoration:none} button{font:inherit}
+::selection{background:rgba(100,232,220,.22);color:white}
+.wrap{width:min(calc(100% - 36px),var(--max));margin:auto}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}
+
+/* navigation */
+.nav-shell{position:fixed;left:0;right:0;top:0;z-index:50;padding:14px 0 0;pointer-events:none}
+.nav{height:62px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 12px 0 16px;border:1px solid var(--line);border-radius:18px;background:rgba(3,20,29,.72);backdrop-filter:blur(16px) saturate(140%);box-shadow:0 14px 40px rgba(0,0,0,.16);pointer-events:auto}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;white-space:nowrap}.brand-mark{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(223,252,255,.18);background:radial-gradient(circle at 35% 30%,#8ef7ea,#0d7283 45%,#063746 72%);box-shadow:inset -8px -9px 20px rgba(0,0,0,.28);font-size:10px;color:#04171e}
+.links{display:flex;align-items:center;gap:4px}.links a{font-size:13px;color:var(--muted);padding:8px 10px;border-radius:10px;transition:.2s}.links a:hover{color:var(--foam);background:rgba(255,255,255,.05)}
+.nav-actions{display:flex;align-items:center;gap:8px}.pill{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 14px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);font-size:12px;font-weight:750;color:var(--foam);transition:.2s}.pill:hover{transform:translateY(-1px);border-color:rgba(100,232,220,.38)}
+.menu{display:none;width:40px;height:40px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--ink);border-radius:12px;cursor:pointer}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:1.04fr .96fr;gap:56px;align-items:center;padding:116px 0 66px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11px;text-transform:uppercase;letter-spacing:.16em;font-weight:800;color:#b9f8f0}.pulse{width:8px;height:8px;border-radius:50%;background:var(--aqua);box-shadow:0 0 0 6px rgba(100,232,220,.09),0 0 24px rgba(100,232,220,.55)}
+h1,h2,h3,p{margin-top:0}h1{font-size:clamp(54px,7.4vw,104px);line-height:.9;letter-spacing:-.07em;margin:22px 0 24px}.water-text{background:linear-gradient(105deg,#f3feff 0%,#9ff5eb 34%,#69d7ff 65%,#eafcff 100%);background-size:180% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:glide 9s linear infinite}@keyframes glide{to{background-position:180% center}}
+.lede{font-size:clamp(18px,1.9vw,22px);color:var(--muted);max-width:700px}.lede strong{color:var(--foam);font-weight:700}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.primary{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:13px;background:linear-gradient(135deg,#77eee1,#57bfe2);color:#03212a;font-size:13px;font-weight:850;box-shadow:0 14px 30px rgba(54,197,202,.17);transition:.2s}.primary:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(54,197,202,.24)}.secondary{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.035);font-size:13px;font-weight:750;color:var(--foam);transition:.2s}.secondary:hover{transform:translateY(-2px);border-color:rgba(103,216,255,.32)}
+.micro{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px;font-size:12px;color:var(--faint)}.micro span{display:inline-flex;align-items:center;gap:6px}.micro i{width:4px;height:4px;border-radius:50%;background:var(--cyan)}
+
+.ocean-card{position:relative;min-height:590px;border:1px solid rgba(199,241,255,.14);border-radius:34px;overflow:hidden;background:linear-gradient(180deg,rgba(48,165,178,.13) 0%,rgba(7,42,55,.5) 35%,rgba(2,16,24,.9) 100%);box-shadow:var(--shadow);isolation:isolate}
+.ocean-card:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.04),transparent 20%,transparent 80%,rgba(0,0,0,.16))}
+#oceanCanvas{position:absolute;inset:0;width:100%;height:100%}
+.surface{position:absolute;left:-10%;right:-10%;top:14%;height:70px;border-radius:50%;border-top:2px solid rgba(195,250,255,.25);filter:drop-shadow(0 7px 14px rgba(87,220,229,.12));animation:surface 5s ease-in-out infinite}@keyframes surface{50%{transform:translateY(7px) scaleX(1.02)}}
+.sunbeam{position:absolute;top:-12%;width:30%;height:82%;background:linear-gradient(180deg,rgba(199,252,255,.19),transparent 78%);filter:blur(6px);transform:skewX(-8deg);opacity:.7}.sb1{left:10%}.sb2{left:48%;width:17%;opacity:.34;transform:skewX(13deg)}
+.depth{position:absolute;right:18px;top:24px;bottom:24px;width:58px;border-left:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;justify-content:space-between;padding-left:12px;color:rgba(218,248,255,.46);font:700 9px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.1em}
+.submersible{position:absolute;left:11%;top:43%;width:160px;height:58px;border-radius:48% 54% 46% 52%;background:linear-gradient(180deg,#a9f3e7,#317d8a 42%,#164a58 70%);box-shadow:inset 0 -12px 24px rgba(0,0,0,.28),0 15px 42px rgba(0,0,0,.24);animation:drift 7s ease-in-out infinite;transform-origin:center}@keyframes drift{0%,100%{transform:translate(0,0) rotate(-2deg)}50%{transform:translate(28px,-13px) rotate(2deg)}}
+.submersible:before{content:"";position:absolute;width:53px;height:31px;border-radius:50% 50% 22% 22%;left:50px;top:-14px;background:#4f9aa3;border:6px solid #1d5a65;box-shadow:inset 0 0 0 4px rgba(170,245,239,.12)}.submersible:after{content:"";position:absolute;right:-26px;top:17px;border-left:34px solid #215f6c;border-top:14px solid transparent;border-bottom:14px solid transparent}.port{position:absolute;width:20px;height:20px;border-radius:50%;top:19px;background:#06242e;border:4px solid #5bb7bf;box-shadow:inset 0 0 12px rgba(106,229,234,.18)}.p1{left:23px}.p2{left:55px}.p3{left:87px}
+.bubble{position:absolute;border-radius:50%;border:1px solid rgba(206,250,255,.18);background:rgba(206,250,255,.05);animation:bubbleUp linear infinite}.b1{width:14px;height:14px;left:35%;bottom:18%;animation-duration:7s}.b2{width:8px;height:8px;left:42%;bottom:8%;animation-duration:6s;animation-delay:1s}.b3{width:19px;height:19px;right:25%;bottom:12%;animation-duration:9s;animation-delay:2s}@keyframes bubbleUp{to{transform:translateY(-480px) translateX(18px);opacity:0}}
+.reef{position:absolute;left:0;right:0;bottom:-2px;height:90px;background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.08) 20%,#03141c 21%);clip-path:polygon(0 58%,6% 43%,11% 62%,17% 35%,24% 59%,31% 50%,38% 70%,47% 42%,54% 68%,61% 38%,69% 63%,77% 48%,84% 67%,92% 39%,100% 59%,100% 100%,0 100%)}
+.world-copy{position:absolute;left:24px;right:88px;bottom:24px;padding:18px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(2,18,26,.66);backdrop-filter:blur(12px);z-index:2}.world-copy small{display:block;color:#8cefe4;font-size:10px;text-transform:uppercase;letter-spacing:.15em;font-weight:800;margin-bottom:8px}.world-copy h3{font-size:24px;letter-spacing:-.035em;margin:0 0 6px}.world-copy p{margin:0;color:var(--muted);font-size:13px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}.tag{font-size:10px;font-weight:750;padding:6px 8px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#b6d4df}
+
+/* section system */
+section.block{position:relative;padding:100px 0}.section-head{display:grid;grid-template-columns:1fr .8fr;gap:46px;align-items:end;margin-bottom:38px}.kicker{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:#7ee9dd;font-weight:850}.section-head h2{font-size:clamp(38px,5vw,66px);line-height:.96;letter-spacing:-.055em;margin:8px 0 0}.section-head p{justify-self:end;max-width:520px;margin:0;color:var(--muted)}
+
+/* signal game */
+.signal{display:grid;grid-template-columns:.85fr 1.15fr;gap:18px;align-items:stretch}.signal-copy,.game{border:1px solid var(--line);border-radius:var(--radius);background:var(--glass);backdrop-filter:blur(10px)}.signal-copy{padding:30px}.signal-copy h3{font-size:30px;letter-spacing:-.04em;margin-bottom:10px}.signal-copy p{color:var(--muted);margin-bottom:0}.game{padding:24px;position:relative;overflow:hidden}.game:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-110px;top:-120px;background:rgba(86,216,229,.07);filter:blur(2px)}.game-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.game-top span{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.12em;font-weight:800}.reset{border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--muted);border-radius:10px;padding:7px 10px;cursor:pointer;font-size:11px}.route{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.node{position:relative;min-height:92px;border:1px solid rgba(188,240,255,.12);background:rgba(2,20,29,.58);border-radius:16px;color:var(--ink);cursor:pointer;text-align:left;padding:14px;transition:.22s}.node:hover{transform:translateY(-2px);border-color:rgba(100,232,220,.35)}.node b{display:block;font-size:13px;margin-bottom:5px}.node small{color:var(--faint);font-size:10px}.node.good{border-color:rgba(136,232,166,.55);background:rgba(50,128,84,.12)}.node.bad{animation:shake .25s linear}@keyframes shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}.game-status{margin-top:14px;min-height:24px;color:#a9d7e3;font-size:12px}
+
+/* experience */
+.roles{display:grid;gap:14px}.role{display:grid;grid-template-columns:180px 1fr auto;gap:24px;padding:28px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,rgba(8,39,52,.68),rgba(4,24,34,.72));transition:.22s}.role:hover{transform:translateY(-3px);border-color:rgba(100,232,220,.26);box-shadow:0 20px 46px rgba(0,0,0,.18)}.role-company{font-size:22px;font-weight:850;letter-spacing:-.035em}.role-title{color:#a8cad6;font-size:13px}.role p{margin:0;color:var(--muted);font-size:14px;max-width:720px}.role-meta{text-align:right;color:var(--faint);font-size:11px}.role-meta b{display:block;color:#d9f6fb;font-size:12px;margin-bottom:4px}
+
+/* work */
+.workgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.case{position:relative;min-height:250px;padding:24px;border:1px solid var(--line);border-radius:22px;background:rgba(3,24,34,.62);overflow:hidden;transition:.22s}.case:hover{transform:translateY(-3px);border-color:rgba(103,216,255,.28);box-shadow:var(--shadow)}.case .num{font:800 10px ui-monospace,SFMono-Regular,Menlo,monospace;color:#6fb8c8;letter-spacing:.11em}.case h3{font-size:25px;letter-spacing:-.035em;margin:38px 0 8px}.case p{color:var(--muted);font-size:13px;max-width:520px}.flow{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}.flow span{padding:6px 8px;border-radius:9px;border:1px solid var(--line);background:rgba(255,255,255,.035);font:700 10px ui-monospace,SFMono-Regular,Menlo,monospace;color:#b6d6df}.case-glow{position:absolute;width:180px;height:180px;border-radius:50%;right:-80px;bottom:-90px;background:rgba(100,232,220,.08);filter:blur(10px)}
+
+/* skills */
+.currents{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.current{padding:19px;border:1px solid var(--line);border-radius:18px;background:rgba(4,26,36,.64)}.current h3{font-size:13px;margin-bottom:11px}.current p{margin:0;color:var(--muted);font-size:11px;line-height:1.85}.depth-label{display:inline-block;margin-bottom:12px;color:#64c5d4;font:800 9px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.1em}
+
+/* contact */
+.contact{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;padding:44px;border:1px solid rgba(177,237,247,.15);border-radius:28px;background:linear-gradient(125deg,rgba(28,111,126,.18),rgba(5,28,38,.82));margin-bottom:50px}.contact:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-220px;top:-260px;border:1px solid rgba(174,245,245,.12);box-shadow:0 0 0 60px rgba(174,245,245,.03),0 0 0 120px rgba(174,245,245,.018)}.contact h2{font-size:clamp(38px,5vw,64px);line-height:.98;letter-spacing:-.05em;margin-bottom:10px}.contact p{margin:0;color:var(--muted)}.contact-actions{display:flex;gap:9px;flex-wrap:wrap;position:relative;z-index:2}
+footer{display:flex;justify-content:space-between;gap:18px;padding:24px 0 40px;color:#527b89;font-size:11px}
+
+.reveal{opacity:0;transform:translateY(18px);transition:.68s cubic-bezier(.2,.8,.2,1)}.reveal.on{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .hero{grid-template-columns:1fr;gap:26px;padding-top:112px}.ocean-card{min-height:500px}.section-head{grid-template-columns:1fr}.section-head p{justify-self:start}.signal{grid-template-columns:1fr}.role{grid-template-columns:150px 1fr}.role-meta{grid-column:2;text-align:left}.currents{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1fr}.workgrid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .wrap{width:min(calc(100% - 24px),var(--max))}.nav-shell{padding-top:9px}.nav{height:58px;border-radius:15px;padding-left:12px}.links{display:none;position:absolute;top:68px;left:12px;right:12px;padding:10px;border:1px solid var(--line);border-radius:14px;background:rgba(2,18,26,.96);backdrop-filter:blur(16px);flex-direction:column;align-items:stretch}.links.open{display:flex}.links a{padding:11px 12px}.menu{display:block}.nav-actions .pill{display:none}
+  .hero{min-height:auto;padding:102px 0 34px;gap:24px}.eyebrow{font-size:10px}h1{font-size:clamp(50px,15vw,72px);margin:18px 0 18px}.lede{font-size:17px}.hero-actions{margin-top:22px}.micro{gap:10px;margin-top:18px}
+  .ocean-card{min-height:410px;border-radius:24px}.depth{right:10px;top:18px;bottom:18px;width:44px;padding-left:8px}.submersible{transform:scale(.78);transform-origin:left center;left:8%;top:37%;animation:none}.world-copy{left:14px;right:58px;bottom:14px;padding:14px}.world-copy h3{font-size:20px}.world-copy p{font-size:12px}.tags{gap:5px}.tag{font-size:9px;padding:5px 7px}
+  section.block{padding:74px 0}.section-head{margin-bottom:26px;gap:18px}.section-head h2{font-size:44px}.section-head p{font-size:14px}
+  .signal-copy,.game{padding:20px}.signal-copy h3{font-size:25px}.route{grid-template-columns:1fr 1fr}.node{min-height:82px;padding:12px}
+  .role{grid-template-columns:1fr;gap:12px;padding:21px}.role-meta{grid-column:auto;text-align:left;order:2}.role p{order:3}.role-company{font-size:20px}.case{min-height:225px;padding:20px}.case h3{margin-top:30px}
+  .currents{grid-template-columns:1fr}.contact{padding:28px 22px}.contact-actions{width:100%}.contact-actions a{flex:1}.contact h2{font-size:42px}footer{flex-direction:column;padding-bottom:28px}
+}
+@media(max-width:390px){.route{grid-template-columns:1fr}.ocean-card{min-height:390px}.world-copy{right:52px}.hero-actions a{width:100%}.contact-actions a{width:100%;flex:auto}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<div class="spotlight" id="spot"></div>
-<div class="top wrap">
- <nav class="navbar">
- <a class="brand" href="#top"><span class="mark">GV</span><span>Golla Vineeth</span></a>
- <div class="navlinks"><a href="#journey">Journey</a><a href="#experience">Experience</a><a href="#work">Engineering Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
- <div class="navright"><button class="ghost" id="theme" aria-label="Toggle theme">Theme</button><a class="primary" href="resume.html">View Resume </a></div>
- </nav>
-</div>
+<div class="noise"></div>
+<div class="nav-shell"><div class="wrap"><nav class="nav">
+  <a class="brand" href="#top"><span class="brand-mark">VG</span><span>Vineeth Golla</span></a>
+  <div class="links" id="navLinks"><a href="#signal">Signal</a><a href="#experience">Experience</a><a href="#work">Work</a><a href="#skills">Stack</a><a href="#contact">Contact</a></div>
+  <div class="nav-actions"><a class="pill" href="https://github.com/vineeth016" target="_blank" rel="noreferrer">GitHub</a><button class="menu" id="menu" aria-label="Open menu">☰</button></div>
+</nav></div></div>
+
 <main id="top">
- <section class="hero wrap">
- <div class="reveal on">
- <div class="kicker"><span class="dot"></span>Software Engineer | Sunnyvale, CA</div>
- <h1>Backend systems.<br><span class="grad">AI-powered products.</span></h1>
- <p class="lede">I build <strong>scalable backend and full-stack applications</strong> across distributed systems, search, cloud infrastructure, and Generative AI/RAG - using Java, Spring Boot, Kafka, AWS, React, and TypeScript.</p>
- <div class="cta"><a class="primary" href="#experience">Explore my work </a><a class="subcta" href="resume.html">Resume</a></div>
- <div class="quicklinks"><a href="https://github.com/vineeth016" target="_blank" rel="noreferrer">GitHub </a><a href="https://www.linkedin.com/in/g-vineeth" target="_blank" rel="noreferrer">LinkedIn </a><a href="mailto:vineethvinney22@gmail.com">vineethvinney22@gmail.com</a></div>
- </div>
+<section class="hero wrap">
+  <div class="reveal on">
+    <div class="eyebrow"><span class="pulse"></span>Software Engineer · Sunnyvale, California</div>
+    <h1>Build deep.<br><span class="water-text">Stay clear.</span></h1>
+    <p class="lede">I build <strong>backend and distributed systems</strong> that stay understandable when traffic, data, and failure modes get complicated. Java, Spring, Kafka, search, cloud, and the engineering around them.</p>
+    <div class="hero-actions"><a class="primary" href="#experience">Dive into my work</a><a class="secondary" href="https://github.com/vineeth016" target="_blank" rel="noreferrer">Explore GitHub</a></div>
+    <div class="micro"><span><i></i>Java / Spring</span><span><i></i>Distributed Systems</span><span><i></i>Kafka / Flink</span><span><i></i>AWS / Kubernetes</span></div>
+  </div>
 
- <div class="hero-visual reveal on" aria-label="Premium night-sky inspired technology visual">
- <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
- <div class="float-chip f1">Java Backend</div><div class="float-chip f2">RAG + LLM</div><div class="float-chip f3">AWS / EKS</div><div class="float-chip f4">Distributed Search</div><div class="float-chip f5">Spring WebFlux</div><div class="float-chip f6">React + TypeScript</div>
- <div class="star-lane">
- <div class="sky-grid"></div>
- <div class="starfield" id="starfield"></div>
- <div class="trail t1"></div><div class="trail t2"></div><div class="trail t3"></div><div class="trail t4"></div>
- <div class="halo h1"></div><div class="halo h2"></div>
- <div class="focus-panel">
- <small>Engineering in motion</small>
- <h3>Beautiful systems under motion.</h3>
- <p>Backend engineering, distributed systems, cloud delivery, search, and Generative AI - built for reliability, scale, and real-world product impact.</p>
- <div class="lane-tags"><span class="lane-tag">Java</span><span class="lane-tag">Kafka</span><span class="lane-tag">AWS</span><span class="lane-tag">RAG</span><span class="lane-tag">Solr</span><span class="lane-tag">React</span></div>
- </div>
- </div>
- </div>
- </section>
+  <div class="ocean-card reveal on" aria-label="Animated ocean engineering world">
+    <canvas id="oceanCanvas"></canvas>
+    <div class="surface"></div><div class="sunbeam sb1"></div><div class="sunbeam sb2"></div>
+    <div class="submersible"><span class="port p1"></span><span class="port p2"></span><span class="port p3"></span></div>
+    <div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div><div class="reef"></div>
+    <div class="depth"><span>0m</span><span>100</span><span>250</span><span>500</span><span>900m</span></div>
+    <div class="world-copy"><small>Current coordinates</small><h3>Backend systems, below the surface.</h3><p>APIs, streams, caches, search, cloud delivery, and reliability — connected as one system.</p><div class="tags"><span class="tag">Java 21</span><span class="tag">WebFlux</span><span class="tag">Kafka</span><span class="tag">Redis</span><span class="tag">Solr</span><span class="tag">Kubernetes</span></div></div>
+  </div>
+</section>
 
- <div class="stats wrap reveal"><div class="stat"><span>Experience</span><strong>5 years</strong></div><div class="stat"><span>Core stack</span><strong>Java | Spring</strong></div><div class="stat"><span>Distributed systems</span><strong>Kafka | Flink | Solr</strong></div><div class="stat"><span>GenAI</span><strong>RAG | MCP | LLMs</strong></div></div>
+<section id="signal" class="block"><div class="wrap">
+  <div class="section-head reveal"><div><div class="kicker">01 / Signal route</div><h2>One request.<br>Four stops.</h2></div><p>A tiny systems game built into the page. Route the request in the right order. Nothing fancy — just a quick engineering brain break.</p></div>
+  <div class="signal reveal">
+    <div class="signal-copy"><div class="kicker">Route challenge</div><h3>Get the packet home.</h3><p>The route is <strong>Gateway → Service → Cache → Store</strong>. Tap the nodes in order. A wrong turn resets the route.</p></div>
+    <div class="game"><div class="game-top"><span id="progress">0 / 4 hops</span><button class="reset" id="resetGame">Reset</button></div><div class="route" id="routeGame">
+      <button class="node" data-step="2"><b>Cache</b><small>hot reads</small></button>
+      <button class="node" data-step="0"><b>Gateway</b><small>entry point</small></button>
+      <button class="node" data-step="3"><b>Store</b><small>durable state</small></button>
+      <button class="node" data-step="1"><b>Service</b><small>business logic</small></button>
+    </div><div class="game-status" id="gameStatus">Waiting at the surface...</div></div>
+  </div>
+</div></section>
 
- <section id="journey" class="wrap journey">
- <div class="section-head reveal"><div><div class="eyebrow">Career journey</div><h2>From foundation<br>to scale.</h2></div><p>A path from core software engineering foundations to cloud automation, distributed systems, and AI-powered product work.</p></div>
- <div class="journey-card reveal">
- <div class="kicker">Moving forward</div>
- <div class="route-wrap">
- <div class="route-line"></div>
- <div class="route-plane" aria-hidden="true">✈</div>
- <div class="stops">
- <div class="stop active"><b>Stop 1</b><h3>HCL</h3><p>Built a strong foundation in Java, APIs, SQL, and full-stack application development.</p></div>
- <div class="stop active"><b>Stop 2</b><h3>Genpact</h3><p>Scaled into cloud release automation, Kubernetes, CI/CD, and deployment reliability.</p></div>
- <div class="stop active"><b>Stop 3</b><h3>Adobe</h3><p>Worked on distributed, event-driven systems for GenAI-powered marketing workflows.</p></div>
- <div class="stop active"><b>Stop 4</b><h3>Apple</h3><p>Building search, migration, and Generative AI-backed product capabilities.</p></div>
- <div class="stop active"><b>Next stop</b><h3>Impact</h3><p>Open to meaningful software engineering work across backend, cloud, and AI.</p></div>
- </div>
- <div class="travel-modes">
- <div class="mode-row train">
- <div class="mode-icon">🚆</div>
- <div class="mode-title">Steady engineering growth</div>
- <div class="mode-track"><div class="mover">🚆</div></div>
- <div class="mode-copy">Consistent growth across backend development, cloud automation, distributed systems, and product engineering.</div>
- </div>
- <div class="mode-row ship">
- <div class="mode-icon">🚢</div>
- <div class="mode-title">Navigating bigger systems</div>
- <div class="mode-track"><div class="mover">🚢</div></div>
- <div class="mode-copy">Comfortable navigating large systems, platform change, AI-enabled products, and real-world production workflows.</div>
- </div>
- </div>
- </div>
- </div>
- </section>
+<section id="experience" class="block"><div class="wrap">
+  <div class="section-head reveal"><div><div class="kicker">02 / Depth log</div><h2>Experience,<br>without the noise.</h2></div><p>My work has moved from Java application foundations into distributed services, streaming, search, cloud-native delivery, and product-facing backend systems.</p></div>
+  <div class="roles">
+    <article class="role reveal"><div><div class="role-company">Apple</div><div class="role-title">Software Engineer (Contract) · Sunnyvale, CA</div></div><p>Building Java 21 and Spring WebFlux services across retrieval, search, tool-driven workflows, real-time streaming, content migration, scheduling, and secure service integration.</p><div class="role-meta"><b>Current</b>Backend · Search · Platform</div></article>
+    <article class="role reveal"><div><div class="role-company">Genpact</div><div class="role-title">Consultant — Software Engineer · India</div></div><p>Built high-throughput Java services and event-processing pipelines with Kafka, Kafka Streams, Flink, gRPC, AWS, Kubernetes, Redis, and PostgreSQL, with a strong focus on latency and reliability.</p><div class="role-meta"><b>May 2022 — Dec 2023</b>Distributed systems · Cloud</div></article>
+    <article class="role reveal"><div><div class="role-company">HCL Technologies</div><div class="role-title">Software Engineer · India</div></div><p>Worked on Java/Spring backend modernization, REST APIs, persistence, asynchronous jobs, automated testing, Docker/Kubernetes delivery, and internal operational tooling.</p><div class="role-meta"><b>Mar 2020 — Apr 2022</b>Java · Backend · Modernization</div></article>
+  </div>
+</div></section>
 
- <section id="experience" class="wrap">
- <div class="section-head reveal"><div><div class="eyebrow">Experience</div><h2>Shipping software<br>across the stack.</h2></div><p>Recent work spans Generative AI, content platforms, search, event streaming, cloud infrastructure, and full-stack engineering.</p></div>
- <div class="experience">
- <article class="role reveal" style="--role:#a3a3a3"><div class="role-top"><div class="logo">A</div><div><h3>Apple</h3><div class="role-title">Software Engineer | Sunnyvale, CA</div></div><div class="when"><b>Apr 2026 - Present</b>Current</div></div><p class="role-copy">Built backend capabilities for an internal Generative AI assistant using Java and Spring WebFlux, implementing RAG workflows, LLM orchestration, contextual retrieval, prompt routing, MCP tool calling, retries, fallbacks, and real-time SSE streaming. Also delivered content migration, search, and scheduling capabilities across Apple TV systems.</p><div class="chips"><span class="chip">Java</span><span class="chip">Spring WebFlux</span><span class="chip">RAG</span><span class="chip">LLM Orchestration</span><span class="chip">MCP</span><span class="chip">SSE</span><span class="chip">Solr</span><span class="chip">Protocol Buffers</span></div></article>
- <article class="role reveal" style="--role:#ef4444"><div class="role-top"><div class="logo">A</div><div><h3>Adobe</h3><div class="role-title">Software Engineer | San Francisco, CA</div></div><div class="when"><b>Apr 2025 - Dec 2025</b>GenStudio for Performance Marketing</div></div><p class="role-copy">Developed Java and Spring Boot microservices, event-driven pipelines, asynchronous APIs, React/TypeScript dashboards, and containerized services for GenAI-driven marketing workflows and production operations.</p><div class="metric"><strong>40%</strong><span>reduction in p99 latency while stabilizing high-throughput Kafka processing</span></div><div class="chips"><span class="chip">Java 21</span><span class="chip">Spring Boot</span><span class="chip">Kafka</span><span class="chip">Flink</span><span class="chip">WebFlux</span><span class="chip">gRPC</span><span class="chip">React</span><span class="chip">AWS / Kubernetes</span></div></article>
- <article class="role reveal" style="--role:#22c55e"><div class="role-top"><div class="logo">G</div><div><h3>Genpact</h3><div class="role-title">Consultant - Software Engineer | India</div></div><div class="when"><b>May 2022 - Dec 2023</b>Cloud & release automation</div></div><p class="role-copy">Automated application releases across Dev and QA, promoted Docker and Helm artifacts through Artifactory to AWS ECR/S3, and supported AWS EKS deployments with Kubernetes, Helm, and Spectro Cloud.</p><div class="chips"><span class="chip">AWS EKS</span><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Helm</span><span class="chip">Artifactory</span><span class="chip">ECR / S3</span></div></article>
- <article class="role reveal" style="--role:#60a5fa"><div class="role-top"><div class="logo">H</div><div><h3>HCL Technologies</h3><div class="role-title">Software Engineer | India</div></div><div class="when"><b>Mar 2020 - Apr 2022</b>Java application development</div></div><p class="role-copy">Developed Java and Spring Boot backend services, REST APIs, asynchronous job-processing workflows, JPA/Hibernate persistence, automated testing, and React-based internal dashboards.</p><div class="chips"><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">REST APIs</span><span class="chip">JPA / Hibernate</span><span class="chip">SQL</span><span class="chip">JUnit / Mockito</span><span class="chip">React</span></div></article>
- </div>
- </section>
+<section id="work" class="block"><div class="wrap">
+  <div class="section-head reveal"><div><div class="kicker">03 / Underwater map</div><h2>Selected engineering<br>work.</h2></div><p>Four technical lanes that represent the kind of problems I like working on: latency, search, streaming reliability, and secure service orchestration.</p></div>
+  <div class="workgrid">
+    <article class="case reveal"><span class="num">01 / LATENCY</span><h3>Freshness-aware summaries</h3><p>Persisted generated results with source-version checks so unchanged content can be served without repeating expensive downstream work.</p><div class="flow"><span>Read</span><span>Version Check</span><span>Reuse / Refresh</span><span>Stream</span></div><div class="case-glow"></div></article>
+    <article class="case reveal"><span class="num">02 / SEARCH</span><h3>Federated content search</h3><p>Queried legacy and next-generation catalogs together, normalized results, removed duplicates, and preserved deterministic relevance during migration.</p><div class="flow"><span>Legacy</span><span>New Catalog</span><span>Solr</span><span>Merge + Rank</span></div><div class="case-glow"></div></article>
+    <article class="case reveal"><span class="num">03 / STREAMING</span><h3>Event processing reliability</h3><p>Designed around retries, dead-letter queues, idempotency, backpressure, consumer tuning, and recovery when downstream systems slow down or fail.</p><div class="flow"><span>Kafka</span><span>Consumers</span><span>Retries</span><span>DLQ</span></div><div class="case-glow"></div></article>
+    <article class="case reveal"><span class="num">04 / PLATFORM</span><h3>Secure service gateway</h3><p>Routed browser-facing requests through a protected backend boundary with server-side credentials and orchestration across internal services and markets.</p><div class="flow"><span>Browser</span><span>Gateway</span><span>Protected APIs</span><span>Status</span></div><div class="case-glow"></div></article>
+  </div>
+</div></section>
 
- <section id="work" class="wrap">
- <div class="section-head reveal"><div><div class="eyebrow">Featured engineering work</div><h2>Systems, not<br>just screenshots.</h2></div><p>Selected engineering stories across Generative AI, distributed search, event processing, and cloud release automation.</p></div>
- <div class="workgrid">
- <article class="case reveal" style="--glow:#8b5cf6"><span class="num">01 / GENAI</span><h3>AI Assistant Platform</h3><p>Retrieval-augmented assistant backend with contextual retrieval, orchestration, tool calling, resilience, and real-time streaming.</p><div class="flow"><span class="box">Request</span><span class="arrow">-></span><span class="box">RAG</span><span class="arrow">-></span><span class="box">LLM</span><span class="arrow">-></span><span class="box">MCP Tools</span><span class="arrow">-></span><span class="box">SSE</span></div><div class="case-glow"></div></article>
- <article class="case reveal" style="--glow:#22d3ee"><span class="num">02 / SEARCH</span><h3>Distributed Content Search</h3><p>Unified discovery across legacy and new catalogs while a content platform was actively migrating.</p><div class="flow"><span class="box">Legacy</span><span class="box">New Catalog</span><span class="arrow">-></span><span class="box">Solr</span><span class="arrow">-></span><span class="box">Merge + Rank</span><span class="arrow">-></span><span class="box">Unified Results</span></div><div class="case-glow"></div></article>
- <article class="case reveal" style="--glow:#f472b6"><span class="num">03 / STREAMING</span><h3>Event Processing Reliability</h3><p>High-throughput event processing with backpressure-aware recovery patterns for slow and failing downstream services.</p><div class="flow"><span class="box">Kafka</span><span class="arrow">-></span><span class="box">Consumers</span><span class="arrow">-></span><span class="box">Retries</span><span class="arrow">-></span><span class="box">DLQ</span><span class="arrow">-></span><span class="box">Autoscale</span></div><div class="case-glow"></div></article>
- <article class="case reveal" style="--glow:#4ade80"><span class="num">04 / CLOUD</span><h3>Release Automation</h3><p>Artifact promotion and deployment workflows designed to reduce manual release work and improve environment consistency.</p><div class="flow"><span class="box">Artifactory</span><span class="arrow">-></span><span class="box">Docker / Helm</span><span class="arrow">-></span><span class="box">ECR / S3</span><span class="arrow">-></span><span class="box">EKS</span></div><div class="case-glow"></div></article>
- </div>
- </section>
+<section id="skills" class="block"><div class="wrap">
+  <div class="section-head reveal"><div><div class="kicker">04 / Ocean currents</div><h2>The stack I move<br>through.</h2></div><p>Broad enough for full systems work, but still centered on backend engineering and distributed systems.</p></div>
+  <div class="currents reveal">
+    <div class="current"><span class="depth-label">SURFACE</span><h3>Core</h3><p>Java · Python · SQL · JavaScript · TypeScript · DSA · OOP · Concurrency</p></div>
+    <div class="current"><span class="depth-label">100M</span><h3>Backend</h3><p>Spring Boot · MVC · WebFlux · Security · REST · GraphQL · gRPC · Protobuf · JPA/Hibernate</p></div>
+    <div class="current"><span class="depth-label">250M</span><h3>Distributed</h3><p>Kafka · Kafka Streams · Flink · Event-driven systems · Idempotency · DLQs · Backpressure · Caching</p></div>
+    <div class="current"><span class="depth-label">500M</span><h3>Data & Search</h3><p>PostgreSQL · MySQL · Redis · Solr · OpenSearch · Indexing · Query design</p></div>
+    <div class="current"><span class="depth-label">900M</span><h3>Cloud & Delivery</h3><p>AWS · Kubernetes · Docker · Helm · ArgoCD · GitOps · Jenkins · GitLab CI/CD · GitHub Actions</p></div>
+  </div>
+</div></section>
 
- <section class="wrap"><div class="ai-banner reveal"><div class="eyebrow">Generative AI engineering</div><h2>AI where it improves the product - not just in the headline.</h2><p>Hands-on work with RAG, LLM integrations, prompt routing, context management, MCP tools, tool calling, retries/fallbacks, grounded responses, real-time streaming, and AI-assisted development workflows.</p><div class="ai-tags"><span>RAG</span><span>LLM Orchestration</span><span>MCP</span><span>Tool Calling</span><span>Prompt Engineering</span><span>Context Management</span><span>SSE</span><span>AI-Assisted Development</span></div></div></section>
-
- <section id="skills" class="wrap"><div class="section-head reveal"><div><div class="eyebrow">Technical depth</div><h2>A backend-first<br>full-stack toolkit.</h2></div><p>Technologies I use across services, streaming, cloud, AI, observability, and product interfaces.</p></div><div class="stack reveal"><div class="stackcol"><h3>Backend</h3><p>Java 21 | Spring Boot | Spring MVC | Spring WebFlux | Spring Security | REST | GraphQL | gRPC | JPA | Hibernate | Protocol Buffers</p></div><div class="stackcol"><h3>Distributed / Data</h3><p>Kafka | Kafka Streams | Flink | Asynchronous Messaging | Idempotency | Dead-Letter Queues | PostgreSQL | Redis | Solr | Datomic</p></div><div class="stackcol"><h3>Cloud / Platform</h3><p>AWS EKS | ECR | S3 | Kubernetes | Docker | Helm | ArgoCD | GitOps | Jenkins | GitLab CI/CD | Maven | Gradle | Artifactory</p></div><div class="stackcol"><h3>Frontend / Observability</h3><p>React | Next.js | TypeScript | JavaScript | HTML | CSS | OpenTelemetry | Distributed Tracing | Splunk | CloudWatch</p></div></div></section>
-
- <section id="contact" class="wrap"><div class="contact reveal"><div><div class="eyebrow">Let's connect</div><h2>Building something hard?</h2><p>I'm always interested in meaningful software engineering problems across backend, distributed systems, cloud, and AI.</p></div><div class="contact-actions"><a class="primary" href="mailto:vineethvinney22@gmail.com">Email me</a><a class="subcta" href="https://www.linkedin.com/in/g-vineeth" target="_blank" rel="noreferrer">LinkedIn </a></div></div></section>
+<section id="contact" class="block"><div class="wrap">
+  <div class="contact reveal"><div><div class="kicker">05 / Surface signal</div><h2>Found something<br>worth building?</h2><p>I’m interested in software engineering problems where backend depth, distributed systems, and practical product work matter.</p></div><div class="contact-actions"><a class="primary" href="mailto:vineethvinney22@gmail.com">Email me</a><a class="secondary" href="https://www.linkedin.com/in/g-vineeth" target="_blank" rel="noreferrer">LinkedIn</a></div></div>
+  <footer><span>© <span id="year"></span> Vineeth Golla</span><span>Built lightweight. No framework required.</span></footer>
+</div></section>
 </main>
-<footer class="wrap"><span>(c) <span id="year"></span> Golla Vineeth</span><span>Java | Distributed Systems | GenAI</span></footer>
+
 <script>
-const root=document.documentElement;const saved=localStorage.getItem("theme");if(saved)root.dataset.theme=saved;document.getElementById("theme").onclick=()=>{const n=root.dataset.theme==="dark"?"light":"dark";root.dataset.theme=n;localStorage.setItem("theme",n)};document.getElementById("year").textContent=new Date().getFullYear();const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("on")}),{threshold:.12});document.querySelectorAll(".reveal").forEach(e=>io.observe(e));const spot=document.getElementById("spot");addEventListener("pointermove",e=>{spot.style.left=e.clientX+"px";spot.style.top=e.clientY+"px"});const sf=document.getElementById("starfield");if(sf&&!sf.children.length){for(let i=0;i<34;i++){const s=document.createElement("span");s.className="star"+(i%7===0?" big":"");s.style.left=(Math.random()*100)+"%";s.style.top=(Math.random()*100)+"%";s.style.animationDuration=(2.5+Math.random()*4)+"s";s.style.animationDelay=(Math.random()*3)+"s";sf.appendChild(s);}}
+const menu=document.getElementById('menu'), navLinks=document.getElementById('navLinks');
+menu?.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+document.getElementById('year').textContent=new Date().getFullYear();
+
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Tiny route game
+let expected=0; const progress=document.getElementById('progress'), status=document.getElementById('gameStatus');
+const nodes=[...document.querySelectorAll('.node')];
+function resetGame(message='Waiting at the surface...'){expected=0;nodes.forEach(n=>n.classList.remove('good','bad'));progress.textContent='0 / 4 hops';status.textContent=message}
+nodes.forEach(n=>n.addEventListener('click',()=>{
+  const step=Number(n.dataset.step);
+  if(step===expected){n.classList.add('good');expected++;progress.textContent=`${expected} / 4 hops`;status.textContent=expected===4?'Packet delivered. Clean route.':'Good hop. Keep going.'}
+  else{n.classList.add('bad');setTimeout(()=>resetGame('Wrong current — route reset.'),280)}
+}));
+document.getElementById('resetGame').addEventListener('click',()=>resetGame());
+
+// Lightweight ocean particles
+const canvas=document.getElementById('oceanCanvas'), ctx=canvas.getContext('2d'); let dots=[]; let raf;
+function resize(){const r=canvas.getBoundingClientRect(),dpr=Math.min(window.devicePixelRatio||1,2);canvas.width=r.width*dpr;canvas.height=r.height*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);dots=Array.from({length:Math.max(26,Math.floor(r.width/12))},()=>({x:Math.random()*r.width,y:Math.random()*r.height,r:Math.random()*1.6+.35,s:Math.random()*.22+.05,a:Math.random()*.28+.05}));}
+function draw(){const r=canvas.getBoundingClientRect();ctx.clearRect(0,0,r.width,r.height);for(const d of dots){d.y-=d.s;if(d.y<-5){d.y=r.height+5;d.x=Math.random()*r.width}ctx.beginPath();ctx.arc(d.x,d.y,d.r,0,Math.PI*2);ctx.fillStyle=`rgba(202,247,255,${d.a})`;ctx.fill()}raf=requestAnimationFrame(draw)}
+resize();draw();window.addEventListener('resize',()=>{cancelAnimationFrame(raf);resize();draw()},{passive:true});
 </script>
 </body>
 </html>
