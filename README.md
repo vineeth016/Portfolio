@@ -1,4 +1,4 @@
-# Vineeth Golla — Software Engineer Portfolio
+# Vineeth Golla - Software Engineer Portfolio
 
 A lightweight personal portfolio focused on backend engineering, distributed systems, search, streaming, and cloud infrastructure.
 
